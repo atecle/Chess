@@ -1,10 +1,20 @@
 package chess;
 
+import view.CmdView;
+import controller.Game;
+
+import java.util.Scanner;
+
 public class Chess {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Game game = new Game();
+		
+		CmdView cmdView = new CmdView(game);
+		
+		cmdView.startGame();
+		
 	}
 
 }

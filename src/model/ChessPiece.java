@@ -57,7 +57,7 @@ public abstract class ChessPiece {
 
 			while (curr <= end) {
 
-				if (board[location.getX()][curr++].getPiece() != null) return false;
+				if (board[curr++][location.getX()].getPiece() != null) return false;
 			}
 			return true;
 		}
@@ -69,7 +69,7 @@ public abstract class ChessPiece {
 
 			while (curr <= end) {
 
-				if (board[curr++][location.getY()].getPiece() != null) return false;
+				if (board[location.getY()][curr++].getPiece() != null) return false;
 			}
 			return true;
 		}

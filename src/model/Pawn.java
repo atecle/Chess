@@ -10,7 +10,6 @@ public class Pawn extends ChessPiece {
 
 		if (getLocation().getX() == dest.getX()) {
 			
-		
 			return (dest.getPiece() == null 
 					&& getLocation().getY() == dest.getY() + yPos)
 					||
@@ -22,6 +21,7 @@ public class Pawn extends ChessPiece {
 	
 		if (Math.abs(getLocation().getX() - dest.getX()) == 1 && getLocation().getY() == dest.getY() + yPos) {
 			
+		
 			if (dest.getPiece() != null) return true;
 			
 			
@@ -32,13 +32,12 @@ public class Pawn extends ChessPiece {
 				
 				if (piece.getPlayer().getColor() == getPlayer().getColor()) return false;
 				
-				 return ((getPlayer().getColor() == PlayerColor.WHITE && dest.getY() == 3 || getPlayer().getColor() == PlayerColor.BLACK && dest.getY() == 5));
+				 return ((getPlayer().getColor() == PlayerColor.WHITE && dest.getY() == 2 || getPlayer().getColor() == PlayerColor.BLACK && dest.getY() == 5));
 				
 			}
 		}
-		
+	
 		return false;
-
 	}
 
 }
